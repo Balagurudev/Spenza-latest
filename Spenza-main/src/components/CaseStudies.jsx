@@ -44,7 +44,7 @@ export default function CaseStudies() {
                     <Badge variant="light" dot={true}>
                         REAL MESSAGES, REAL FEEDBACK
                     </Badge>
-                    <h2>Crafted by The Best Sales Teams</h2>
+                    <h2>Proven Telecom Growth Stories</h2>
                 </div>
             </div>
 

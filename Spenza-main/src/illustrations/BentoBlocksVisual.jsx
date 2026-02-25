@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, CircleDollarSign, UserCheck, Zap, ArrowDownToLine } from 'lucide-react';
+import { Database, Activity, Users, BarChart2, ArrowDownToLine } from 'lucide-react';
 import './BentoBlocksVisual.css';
 
 export default function BentoBlocksVisual() {
@@ -17,10 +17,10 @@ export default function BentoBlocksVisual() {
                     </div>
 
                     <div className="flowing-icons">
-                        <div className="flow-icon flow-1"><Smartphone size={24} color="var(--primary-color)" /></div>
-                        <div className="flow-icon flow-2"><CircleDollarSign size={24} color="var(--primary-color)" /></div>
-                        <div className="flow-icon flow-3"><UserCheck size={24} color="var(--primary-color)" /></div>
-                        <div className="flow-icon flow-4"><Zap size={24} color="var(--primary-color)" /></div>
+                        <div className="flow-icon flow-1"><Database size={24} color="var(--primary-color)" /></div>
+                        <div className="flow-icon flow-2"><Activity size={24} color="var(--primary-color)" /></div>
+                        <div className="flow-icon flow-3"><Users size={24} color="var(--primary-color)" /></div>
+                        <div className="flow-icon flow-4"><BarChart2 size={24} color="var(--primary-color)" /></div>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@ export default function BentoBlocksVisual() {
                     <div className="bento-folder folder-2">
                         <div className="folder-tab"></div>
                         <div className="folder-body">
-                            <span className="folder-title">Loyalty<br />Metrics</span>
+                            <span className="folder-title">First Quater<br />Insight</span>
                         </div>
                     </div>
                 </div>

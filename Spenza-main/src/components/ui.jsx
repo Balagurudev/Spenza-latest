@@ -5,6 +5,7 @@ export function Button({
     children,
     variant = 'primary',
     className = '',
+    rightIcon = null,
     ...props
 }) {
     const baseClass = 'btn';
@@ -13,6 +14,7 @@ export function Button({
     return (
         <button className={`${baseClass} ${variantClass} ${className}`} {...props}>
             {children}
+            {rightIcon}
         </button>
     );
 }

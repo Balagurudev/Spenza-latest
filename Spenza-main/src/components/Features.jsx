@@ -9,7 +9,7 @@ import IntegrationsBeam from '../illustrations/IntegrationsBeam';
 import Globe from './ui/Globe';
 import { OrbitingCircles } from './ui/OrbitingCircles';
 import FinanceVisual from '../illustrations/FinanceVisual';
-import bentoBlocksAnimation from '../illustrations/bento_blocks_conversion_card.json';
+import BentoBlocksVisual from '../illustrations/BentoBlocksVisual';
 import './Features.css';
 
 const featureData = [
@@ -179,8 +179,8 @@ export default function Features() {
                                     </div>
                                 )}
                                 {feature.id === 'finance' && (
-                                    <div className="finance-lottie-wrapper">
-                                        <Lottie animationData={bentoBlocksAnimation} loop={true} className="finance-lottie" />
+                                    <div className="bento-visual-container">
+                                        <BentoBlocksVisual />
                                     </div>
                                 )}
                                 {feature.id !== 'travel' && feature.id !== 'iot' && feature.id !== 'consumer' && feature.id !== 'devices' && feature.id !== 'mnos' && feature.id !== 'finance' && (

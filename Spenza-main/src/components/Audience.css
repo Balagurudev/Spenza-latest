@@ -1,212 +1,94 @@
 .audience-section {
     padding: var(--space-3xl) 0;
+    background-color: var(--val-white);
     position: relative;
-    overflow: hidden;
 }
 
-.dot-grid-bg {
-    position: absolute;
-    inset: 0;
-    /* Subtle dot grid pattern */
-    background-image: radial-gradient(var(--border-light) 1px, transparent 1px);
-    background-size: 24px 24px;
-    pointer-events: none;
-    opacity: 0.5;
-    z-index: 1;
+.audience-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.audience-section .section-header {
+    text-align: center;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
 }
 
 .audience-section h2 {
     font-size: clamp(32px, 4vw, 48px);
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-2xl);
-}
-
-/* Custom Tabs */
-.audience-tabs-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: var(--val-off-white);
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
-}
-
-.tab-triggers {
-    display: flex;
-    border-bottom: 1px solid var(--border-light);
-    position: relative;
-}
-
-.tab-btn {
-    flex: 1;
-    background: transparent;
-    border: none;
-    border-right: 1px solid var(--border-light);
-    padding: var(--space-md) var(--space-sm);
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--text-secondary-light);
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    position: relative;
-    z-index: 2;
-}
-
-.tab-btn:last-child {
-    border-right: none;
-}
-
-.tab-btn.active {
+    font-family: var(--font-heading);
     color: var(--val-black);
     font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
 }
 
-/* Absolute positioned highlight div to slide behind active tab */
-.tab-highlight {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    /* Gradient matching design with Spenza Orange top border */
-    background: var(--val-off-white);
-    border-top: 2px solid var(--primary-color);
-    transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    z-index: 1;
-}
-
-.tab-content {
-    display: none;
-    animation: fadeIn 0.4s ease;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-.tab-split {
+.audience-features-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    min-height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    /* Outer borders matching the clean grid aesthetic */
+    border: 1px solid var(--border-light);
+    background-color: var(--val-white);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.tab-copy {
-    padding: var(--space-2xl);
-    text-align: left;
+.audience-grid-item {
+    padding: 64px 48px;
+    border-right: 1px solid var(--border-light);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-right: 1px solid var(--border-light);
 }
 
-.tab-copy h3 {
-    font-size: 32px;
-    margin-bottom: var(--space-md);
+.audience-grid-item:last-child {
+    border-right: none;
 }
 
-.mt-md {
-    margin-top: var(--space-md);
+.audience-grid-icon {
+    color: var(--val-black);
+    margin-bottom: 32px;
+    opacity: 0.8;
+    /* Slight fade on the icon like the reference image */
 }
 
-.mt-lg {
-    margin-top: var(--space-lg);
+.audience-grid-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--val-black);
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
 }
 
-.mt-xl {
-    margin-top: var(--space-xl);
-}
-
-.benefit-point h4 {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: var(--space-sm);
+.audience-grid-desc {
+    font-size: 14px;
     color: var(--text-secondary-light);
-    text-transform: uppercase;
-}
-
-.benefit-point p {
-    font-size: 15px;
+    /* Neutral grey text */
     line-height: 1.6;
-    color: var(--text-secondary-light);
+    margin: 0;
 }
 
-.tab-visual {
-    padding: 40px 0 0 40px;
-    /* Cut off on right and bottom to simulate mockup overflow */
-    overflow: hidden;
-    position: relative;
-}
-
-.ui-mockup-placeholder {
-    background: var(--val-off-white);
-    border-radius: 12px 0 0 0;
-    box-shadow: -20px -20px 60px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary-light);
-    font-family: var(--font-mono);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Responsive constraints */
 @media (max-width: 1024px) {
-    .tab-split {
+    .audience-features-grid {
         grid-template-columns: 1fr;
     }
 
-    .tab-visual {
-        padding: 40px;
-        min-height: 400px;
-    }
-
-    .ui-mockup-placeholder {
-        border-radius: 12px;
-    }
-}
-
-@media (max-width: 768px) {
-    .tab-triggers {
-        flex-direction: column;
-    }
-
-    .tab-btn {
-        justify-content: flex-start;
-        padding-left: 20px;
+    .audience-grid-item {
         border-right: none;
         border-bottom: 1px solid var(--border-light);
+        padding: 48px 32px;
     }
 
-    .tab-highlight {
-        width: 100% !important;
-        height: 25%;
-        /* Needs JS logic fix for vertical height if mobile, relying on active class instead for simplicity if needed */
-        display: none;
-        /* Hide slider on mobile to prevent complex vertical math for now */
-    }
-
-    .tab-btn.active {
-        background: var(--val-off-white);
-        border-right: 3px solid var(--primary-color);
+    .audience-grid-item:last-child {
+        border-bottom: none;
     }
 }
