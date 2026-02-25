@@ -39,7 +39,7 @@ export default function BentoBlocksVisual() {
                     <div className="bento-folder folder-2">
                         <div className="folder-tab"></div>
                         <div className="folder-body">
-                            <span className="folder-title">First Quater<br />Insight</span>
+                            <span className="folder-title">Loyalty<br />Metrics</span>
                         </div>
                     </div>
                 </div>
